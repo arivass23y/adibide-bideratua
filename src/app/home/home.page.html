@@ -1,12 +1,12 @@
-<app-header titulua="HOME"></app-header>
-
+<app-goiburukoa titulua="HOME"></app-goiburukoa>>
 <ion-content [fullscreen]="true">
-
-  <ion-list *ngFor="let pertsona of valoresLista">
-    <ion-item>
-      <ion-label> {{pertsona.id}}: {{pertsona.izena}} {{pertsona.abizena}} </ion-label>
-    </ion-item>
-  </ion-list>
-  <ion-button>TXERTATU</ion-button>
-  <ion-button>EZABATU</ion-button>
+  <form #formularioa="ngForm">
+    <ion-list>
+      <ion-item *ngFor="let pertsona of pertsonak">
+        <ion-label>{{pertsona.id}}: {{pertsona.izena}} {{pertsona.abizena}}</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-button routerLink="/txertatu">Txertatu</ion-button>
+    <ion-button routerLink="/ezabatu">Ezabatu</ion-button>
+  </form>
 </ion-content>
