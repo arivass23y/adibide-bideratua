@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NiremoduluakModule } from "../konponenteak/niremoduluak.module";
+import { HomeService } from '../zerbitzuak/home.service';
 
 @Component({
   selector: 'app-ezabatu',
@@ -11,10 +12,10 @@ export class EzabatuPage implements OnInit {
 
   id!:string;
 
-  constructor() { }
+  constructor(private zerbitzuak:HomeService) { }
 
   onClick(){
-
+    this.zerbitzuak.pertsonaEzabatu(this.id);
   }
 
   ngOnInit() {

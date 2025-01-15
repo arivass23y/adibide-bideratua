@@ -17,16 +17,16 @@ export class TxertatuPage implements OnInit {
 
   zenbakiak:number[]=[1,2,3,4,5,6,7,8,9];
 
-  constructor(zerbitzua:HomeService) { }
-
+  constructor(private zerbitzua:HomeService) {}
+  
   onClick(){
-    let pertsonaBerria:IPertsona
-    { this.id= "",
-      this.izena= "",
-      this.abizena=""
+    let pertsonaBerria:IPertsona =
+    { id: this.id ,
+      izena: this.izena,
+      abizena: this.abizena
     }
-    
-    
+
+    this.zerbitzua.datuakTxertatu(pertsonaBerria);
   }
 
   ngOnInit() {

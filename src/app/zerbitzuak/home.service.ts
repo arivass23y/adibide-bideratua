@@ -25,5 +25,12 @@ pertsonak:IPertsona[]=[
   datuakTxertatu(pertsona:IPertsona){
     this.pertsonak.push(pertsona);
   }
+
+  pertsonaEzabatu(id:string){
+    let position = this.pertsonak.findIndex(pertsona => pertsona.id === id);
+    if (position !== -1) {
+      this.pertsonak.splice(position,1);
+    }
+  }
   constructor() { }
 }
