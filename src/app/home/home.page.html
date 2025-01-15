@@ -4,9 +4,13 @@
     <ion-list>
       <ion-item *ngFor="let pertsona of pertsonak">
         <ion-label>{{pertsona.id}}: {{pertsona.izena}} {{pertsona.abizena}}</ion-label>
+        <ion-icon name="trash-outline"></ion-icon>
+        <ion-icon name="add-circle-outline"></ion-icon>
       </ion-item>
+      
     </ion-list>
-    <ion-button routerLink="/txertatu">Txertatu</ion-button>
+    <app-alert-ezabatu></app-alert-ezabatu>
+    
     <ion-button routerLink="/ezabatu">Ezabatu</ion-button>
   </form>
 </ion-content>
